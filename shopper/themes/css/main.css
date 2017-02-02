@@ -23,7 +23,7 @@ a{
 	color:#9B9B9B;
 }
 a:hover{
-	color:#3f3f3f;
+	color:#9B9B9B;
 	text-decoration:none;
 }
 .img-al{
@@ -92,7 +92,7 @@ section.header_text{
 	border-bottom:1px solid #fff;
 }
 section.homepage-slider{
-	border-bottom:1px dotted #3f3f3f;
+	border-bottom:1px dotted #9B9B9B;
 	padding-bottom:1px;
 	position: relative;
 	top:0;
@@ -108,7 +108,7 @@ section.homepage-slider div.intro{
 	opacity:.7;
 }
 section.homepage-slider h1{
-	background-color: #3f3f3f;
+	background-color: #9B9B9B;
 	color:#fff;
 	padding:2px 7px;
 	font-size:30px;
@@ -319,7 +319,7 @@ section.navbar{
 	color: black;
 	text-decoration:none;
 }
-#menu .current{color: #3f3f3f !important;}
+#menu .current{color: #9B9B9B !important;}
 
 #menu ul ul {
     background: none repeat scroll 0 0 #eee;
@@ -351,8 +351,8 @@ section.navbar{
     color: #333;
     font-size: 12px;
 }
-#menu ul ul a:hover,#menu > ul > li:hover > a{color: #fff;background-color: #3f3f3f;}
-#menu ul ul a:hover{background-color:#3f3f3f;}
+#menu ul ul a:hover,#menu > ul > li:hover > a{color: #fff;background-color: #9B9B9B;}
+#menu ul ul a:hover{background-color:#9B9B9B;}
 #menu > ul > li:hover {visibility: inherit;}
 #menu li:hover {visibility: inherit;}
 #menu li:hover ul,
@@ -367,7 +367,7 @@ section.navbar{
     top: 0px;
 }
 #menu li.sfHover > a{
-	color:#3f3f3f;
+	color:#9B9B9B;
 }
 #menu .sf-sub-indicator{
 	display:none;
@@ -383,7 +383,7 @@ section.navbar{
 }
 .feature_box img{	
 	margin-bottom:10px;
-	background-color:#3f3f3f;
+	background-color:#9B9B9B;
 	padding:25px;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;	
@@ -430,7 +430,7 @@ section.navbar{
 	left:0;
 }
 .product-box:hover{
-	background-color:#3f3f3f;
+	background-color:#9B9B9B;
 	-webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;
