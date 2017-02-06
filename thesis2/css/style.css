@@ -59,6 +59,17 @@
         background-color: #FFFFFF;
 	}
 
+    #bannerleft {
+        float: left;
+        display: block-inline;
+    }
+
+     #bannerright {
+        float: right;
+        display: block-inline;
+        text-align: right;
+    }
+
     .navbar{
         text-align: center;
         margin-left: auto;
@@ -149,6 +160,15 @@
     color: #B3B3B3;
     text-align: left;
     padding-left: 20px;
+}
+
+.gallery .thumbnail .tag {
+    color: #5D5E5D;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .cards {
