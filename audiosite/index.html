@@ -24,8 +24,8 @@
 	
 	</div>
 
-        <!-- THIS PLAYS EVERY LINK -->
-        <div id="cwrap">
+    <!-- THIS PLAYS EVERY LINK -->
+    <div id="cwrap">
         <div id="nowPlay">
             <h3 id="npAction">Paused:</h3>
             <div id="npTitle"></div>
@@ -41,7 +41,26 @@
             </div>
         </div>
     
-    </div>
+     </div>
+
+     <!-- THIS PLAYS EVERY HEADER -->
+    <div id="cwrap">
+        <div id="nowPlay">
+            <h3 id="npAction">Paused:</h3>
+            <div id="npTitle"></div>
+        </div>
+        <div id="audiowrap">
+            <div id="audio0">
+                <audio id="audio1" controls="controls" width="300">
+                    Your browser does not support the HTML5 Audio Tag.
+                </audio>
+            </div>
+            <div id="extraControls">
+                <button id="btnHeaderPrev" class="ctrlbtn">|&lt;&lt; Prev Header </button> <button id="btnHeaderNext" class="ctrlbtn">Next Header &gt;&gt;|</button>
+            </div>
+        </div>
+    
+     </div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -49,29 +68,48 @@
             jQuery(function($) {
                 var supportsAudio = !!document.createElement('audio').canPlayType;
                 if(supportsAudio) {
-                    var index = 0, indexLink = 0,
+                    var index = 0, indexLink = 0, indexHeader = 0,
                     playing = false;
                     mediaPath = 'audio/',
                     extension = '',
                     tracks = [
                         {"track":0,"name":"End of List","length":"00:00","file":"end"},
                         {"track":1,"name":"Landmark Banner","length":"00:00","file":"landmark_banner"},
-                        {"track":2,"name":"Felt Logo","length":"00:00","file":"link_imagelogo"},
-                        {"track":3,"name":"Sign In","length":"00:00","file":"link_signin"},
+                        {"track":2,"name":"Sign In","length":"00:00","file":"link_signin"},
+                        {"track":3,"name":"Felt Logo","length":"00:00","file":"link_imagelogo"},
                         {"track":4,"name":"Home","length":"00:00","file":"link_home"},
                         {"track":5,"name":"End of List","length":"00:00","file":"end"}
-
                     ],
+
                      tracksLink = [
                         {"track":0,"name":"End of List","length":"00:00","file":"end"},
-                        {"track":1,"name":"Felt Logo","length":"00:00","file":"link_imagelogo"},
-                        {"track":2,"name":"Sign In","length":"00:00","file":"link_signin"},
+                        {"track":1,"name":"Sign In","length":"00:00","file":"link_signin"},
+                        {"track":2,"name":"Felt Logo","length":"00:00","file":"link_imagelogo"},
                         {"track":3,"name":"Home","length":"00:00","file":"link_home"},
-                        {"track":4,"name":"End of List","length":"00:00","file":"end"}
-
+                        {"track":4,"name":"Women","length":"00:00","file":"link_women"},
+                        {"track":5,"name":"Men","length":"00:00","file":"link_men"},
+                        {"track":6,"name":"Customer Service","length":"00:00","file":"link_customer"},
+                        {"track":7,"name":"Shopping Cart","length":"00:00","file":"link_shoppingcart"},
+                        {"track":8,"name":"End of List","length":"00:00","file":"end"}
                     ],
+
+                    tracksHeader = [
+                        {"track":0,"name":"End of List","length":"00:00","file":"end"},
+                        {"track":1,"name":"Sale","length":"00:00","file":"header_sale"},
+                        {"track":2,"name":"Blouse","length":"00:00","file":"header_blouse"},
+                        {"track":3,"name":"Graphic T","length":"00:00","file":"header_graphict"},
+                        {"track":4,"name":"Basic V Neck","length":"00:00","file":"header_basicv"},
+                        {"track":5,"name":"Tank Top","length":"00:00","file":"header_tanktop"},
+                        {"track":6,"name":"Sweater","length":"00:00","file":"header_sweater"},
+                        {"track":7,"name":"Button Down","length":"00:00","file":"header_buttondown"},
+                        {"track":8,"name":"Shoulder","length":"00:00","file":"header_shoulder"},
+                        {"track":9,"name":"Plaid","length":"00:00","file":"header_plaid"},
+                        {"track":10,"name":"End of List","length":"00:00","file":"end"}
+                    ],
+
                     trackCount = tracks.length,
                     trackLinkCount = tracksLink.length,
+                    trackHeaderCount = tracksHeader.length,
                     npAction = $('#npAction'),
                     npTitle = $('#npTitle'),
                     audio = $('#audio1').bind('play', function() {
@@ -92,7 +130,7 @@
                             index--;
                             loadTrack(index);
                             audio.play();
-                            console.log(index);
+                            console.log("line" + index);
 
                             /* WANT TO AUTOMATICALLY PLAY NEXT TRACK WHEN 'PREV BUTTON' IS PRESSED
                             if(playing) {
@@ -112,7 +150,7 @@
                             index++;
                             loadTrack(index);
                             audio.play();
-                            console.log(index);
+                            console.log("line" + index);
                              /* AFTER YOU PLAY THE SONG GO TO NEXT TRACK*/
 
                             /* WANT TO AUTOMATICALLY PLAY NEXT TRACK WHEN 'NEXT BUTTON' IS PRESSED
@@ -136,7 +174,7 @@
                             indexLink--;
                             loadLinkTrack(indexLink);
                             audio.play();
-                            console.log(indexLink);
+                            console.log("link" + indexLink);
                         } else {
                             audio.play();
                         }
@@ -146,11 +184,35 @@
                             indexLink++;
                             loadLinkTrack(indexLink);
                             audio.play();
-                            console.log(indexLink);
+                            console.log("link" + indexLink);
                         } else {
                             audio.play();
                         }
                     }),
+
+                     /* THIS BUTTONS FOR THE HEADER TRACKS  */ 
+
+                     btnHeaderPrev = $('#btnHeaderPrev').click(function() {
+                        if((indexHeader - 1) > -1) {
+                            indexHeader--;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                            console.log("header" + indexHeader);
+                        } else {
+                            audio.play();
+                        }
+                    }),
+                    btnHeaderNext = $('#btnHeaderNext').click(function() {
+                        if((indexHeader + 1) < trackHeaderCount) {
+                            indexHeader++;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                            console.log("header" + indexHeader);
+                        } else {
+                            audio.play();
+                        }
+                    }),
+
                     li = $('#plUL li').click(function() {
                         var id = parseInt($(this).index());
                         if(id !== index) {
@@ -182,6 +244,19 @@
                     },
                     playLinkTrack = function(id) {
                         loadLinkTrack(id);
+                        audio.play();
+                    },
+
+                     /* THIS IS JUST FOR THE HEADER TRACKS  */ 
+                    loadHeaderTrack = function(id) {
+                        $('.plSel').removeClass('plSel');
+                        $('#plUL li:eq(' + id + ')').addClass('plSel');
+                        npTitle.text(tracksHeader[id].name);
+                        indexHeader = id;
+                        audio.src = mediaPath + tracksHeader[id].file + extension;
+                    },
+                    playHeaderTrack = function(id) {
+                        loadHeaderTrack(id);
                         audio.play();
                     };
 
