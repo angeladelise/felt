@@ -5,7 +5,7 @@
 </head>
 <body>
 
-
+    <!-- THIS PLAYS EVERY LINE -->
 	<div id="cwrap">
 	    <div id="nowPlay">
 	        <h3 id="npAction">Paused:</h3>
@@ -18,54 +18,30 @@
 	            </audio>
 	        </div>
 	        <div id="extraControls">
-	            <button id="btnPrev" class="ctrlbtn">|&lt;&lt; Prev Track</button> <button id="btnNext" class="ctrlbtn">Next Track &gt;&gt;|</button>
+	            <button id="btnPrev" class="ctrlbtn">|&lt;&lt; Prev Line </button> <button id="btnNext" class="ctrlbtn">Next Line &gt;&gt;|</button>
 	        </div>
 	    </div>
-	    <div id="plwrap">
-	        <div class="plHead">
-	            <div class="plHeadNum">Track</div>
-	            <div class="plHeadTitle">Title</div>
-	            <div class="plHeadLength">Length</div>
-	        </div>
-	        <ul id="plUL">
-	            <li>
-	                <div class="plItem">
-	                    <div class="plNum">1</div>
-	                    <div class="plTitle">Happy Birthday Variation: In the style of Beethoven</div>
-	                    <div class="plLength">0:55</div>
-	                </div>
-	            </li>
-	            <li>
-	                <div class="plItem">
-	                    <div class="plNum">2</div>
-	                    <div class="plTitle">Wedding March Variation 1</div>
-	                    <div class="plLength">0:37</div>
-	                </div>
-	            </li>
-	            <li>
-	                <div class="plItem">
-	                    <div class="plNum">3</div>
-	                    <div class="plTitle">Happy Birthday Variation: In the style of Tango</div>
-	                    <div class="plLength">1:05</div>
-	                </div>
-	            </li>
-	            <li>
-	                <div class="plItem">
-	                    <div class="plNum">4</div>
-	                    <div class="plTitle">Wedding March Variation 2</div>
-	                    <div class="plLength">0:40</div>
-	                </div>
-	            </li>
-	            <li>
-	                <div class="plItem">
-	                    <div class="plNum">5</div>
-	                    <div class="plTitle">Random Classical</div>
-	                    <div class="plLength">0:59</div>
-	                </div>
-	            </li>
-	        </ul>
-	    </div>
+	
 	</div>
+
+        <!-- THIS PLAYS EVERY LINK -->
+        <div id="cwrap">
+        <div id="nowPlay">
+            <h3 id="npAction">Paused:</h3>
+            <div id="npTitle"></div>
+        </div>
+        <div id="audiowrap">
+            <div id="audio0">
+                <audio id="audio1" controls="controls" width="300">
+                    Your browser does not support the HTML5 Audio Tag.
+                </audio>
+            </div>
+            <div id="extraControls">
+                <button id="btnLinkPrev" class="ctrlbtn">|&lt;&lt; Prev Link </button> <button id="btnLinkNext" class="ctrlbtn">Next Link &gt;&gt;|</button>
+            </div>
+        </div>
+    
+    </div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -73,7 +49,7 @@
             jQuery(function($) {
                 var supportsAudio = !!document.createElement('audio').canPlayType;
                 if(supportsAudio) {
-                    var index = 0,
+                    var index = 0, indexLink = 0,
                     playing = false;
                     mediaPath = 'audio/',
                     extension = '',
@@ -86,7 +62,16 @@
                         {"track":5,"name":"End of List","length":"00:00","file":"end"}
 
                     ],
+                     tracksLink = [
+                        {"track":0,"name":"End of List","length":"00:00","file":"end"},
+                        {"track":1,"name":"Felt Logo","length":"00:00","file":"link_imagelogo"},
+                        {"track":2,"name":"Sign In","length":"00:00","file":"link_signin"},
+                        {"track":3,"name":"Home","length":"00:00","file":"link_home"},
+                        {"track":4,"name":"End of List","length":"00:00","file":"end"}
+
+                    ],
                     trackCount = tracks.length,
+                    trackLinkCount = tracksLink.length,
                     npAction = $('#npAction'),
                     npTitle = $('#npTitle'),
                     audio = $('#audio1').bind('play', function() {
@@ -143,12 +128,38 @@
                             */
                         }
                     }),
+
+                    /* THIS BUTTONS FOR THE LINK TRACKS  */ 
+
+                     btnLinkPrev = $('#btnLinkPrev').click(function() {
+                        if((indexLink - 1) > -1) {
+                            indexLink--;
+                            loadLinkTrack(indexLink);
+                            audio.play();
+                            console.log(indexLink);
+                        } else {
+                            audio.play();
+                        }
+                    }),
+                    btnLinkNext = $('#btnLinkNext').click(function() {
+                        if((indexLink + 1) < trackLinkCount) {
+                            indexLink++;
+                            loadLinkTrack(indexLink);
+                            audio.play();
+                            console.log(indexLink);
+                        } else {
+                            audio.play();
+                        }
+                    }),
                     li = $('#plUL li').click(function() {
                         var id = parseInt($(this).index());
                         if(id !== index) {
                             playTrack(id);
                         }
                     }),
+                    
+                    /* THIS IS FOR EVERY LINE TRACK  */ 
+
                     loadTrack = function(id) {
                         $('.plSel').removeClass('plSel');
                         $('#plUL li:eq(' + id + ')').addClass('plSel');
@@ -159,7 +170,21 @@
                     playTrack = function(id) {
                         loadTrack(id);
                         audio.play();
+                    }, 
+
+                    /* THIS IS JUST FOR THE LINK TRACKS  */ 
+                    loadLinkTrack = function(id) {
+                        $('.plSel').removeClass('plSel');
+                        $('#plUL li:eq(' + id + ')').addClass('plSel');
+                        npTitle.text(tracksLink[id].name);
+                        indexLink = id;
+                        audio.src = mediaPath + tracksLink[id].file + extension;
+                    },
+                    playLinkTrack = function(id) {
+                        loadLinkTrack(id);
+                        audio.play();
                     };
+
                     if(audio.canPlayType('audio/ogg')) {
                         extension = '.ogg';
                     }
