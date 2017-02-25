@@ -66,6 +66,7 @@
 	        </ul>
 	    </div>
 	</div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
      <script type="text/javascript">
@@ -77,10 +78,13 @@
                     mediaPath = 'audio/',
                     extension = '',
                     tracks = [
-                        {"track":1,"name":"Happy Birthday Variation: In the style of Beethoven","length":"00:55","file":"BootyWhop"},
-                        {"track":2,"name":"Wedding March Variation 1","length":"00:37","file":"Drake-The Motto"},
-                        {"track":3,"name":"Happy Birthday Variation: In the style of Tango","length":"01:05","file":"BootyWhop"},
-                        {"track":4,"name":"Wedding March Variation 2","length":"00:40","file":"BootyWhop"}
+                        {"track":0,"name":"End of List","length":"00:00","file":"end"},
+                        {"track":1,"name":"Landmark Banner","length":"00:00","file":"landmark_banner"},
+                        {"track":2,"name":"Felt Logo","length":"00:00","file":"link_imagelogo"},
+                        {"track":3,"name":"Sign In","length":"00:00","file":"link_signin"},
+                        {"track":4,"name":"Home","length":"00:00","file":"link_home"},
+                        {"track":5,"name":"End of List","length":"00:00","file":"end"}
+
                     ],
                     trackCount = tracks.length,
                     npAction = $('#npAction'),
@@ -93,40 +97,50 @@
                         npAction.text('Paused:');
                     }).bind('ended', function() {
                         npAction.text('Paused:');
-                        if((index + 1) < trackCount) {
-                            index++;
-                            loadTrack(index);
-                            audio.play();
-                        } else {
-                            audio.pause();
-                            index = 0;
-                            loadTrack(index);
-                        }
+                        audio.pause();
+                    
+
                     }).get(0),
+
                     btnPrev = $('#btnPrev').click(function() {
                         if((index - 1) > -1) {
                             index--;
                             loadTrack(index);
+                            audio.play();
+                            console.log(index);
+
+                            /* WANT TO AUTOMATICALLY PLAY NEXT TRACK WHEN 'PREV BUTTON' IS PRESSED
                             if(playing) {
                                 audio.play();
                             }
+                            */
                         } else {
-                            audio.pause();
+                            audio.play();
+                            /* DONT WANT AUDIO TO LOOP BACK TO FRONT, STAY WHERE YOU ARE!
                             index = 0;
                             loadTrack(index);
+                            */
                         }
                     }),
                     btnNext = $('#btnNext').click(function() {
                         if((index + 1) < trackCount) {
                             index++;
                             loadTrack(index);
+                            audio.play();
+                            console.log(index);
+                             /* AFTER YOU PLAY THE SONG GO TO NEXT TRACK*/
+
+                            /* WANT TO AUTOMATICALLY PLAY NEXT TRACK WHEN 'NEXT BUTTON' IS PRESSED
                             if(playing) {
                                 audio.play();
                             }
+                            */
                         } else {
-                            audio.pause();
+                            audio.play();
+                            /* DONT WANT AUDIO TO LOOP BACK TO FRONT, STAY WHERE YOU ARE!
                             index = 0;
                             loadTrack(index);
+                            */
                         }
                     }),
                     li = $('#plUL li').click(function() {
@@ -152,6 +166,8 @@
                     if(audio.canPlayType('audio/mpeg')) {
                         extension = '.mp3';
                     }
+                   
+
                     loadTrack(index);
                 }
                 
