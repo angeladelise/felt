@@ -8,97 +8,103 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+    <div id="container">
+        <img id="logo" src="images/felt_logo.png" width=150px alt="Felt Logo">
 
-    <img src="images/felt_logo.png" width=500px alt="Felt Logo">
-
-    <!-- TIMER SECTION  <div id="worked">00:00</div> -->
-    
-    <div id="worked">00:00</div>
-    <div id="time">:</div>
+        <!-- TIMER SECTION  <div id="worked">00:00</div> -->
+        
+        <div id="worked">00:00</div>
+        <div id="time">:</div>
 
 
 
-        <p>Goal: Find the button down shirt and write the review rating number in the box below before the time runs out. </p>
-    
-        Review Rating Number:<br>
-        <input type="text" name="Review Rating Number" id="rating" value="">
-        <button onclick ="ratingcheck()"> Submit </button> 
+            <p>Task: Find the button down shirt and write the review rating number in the box below before the time runs out. </p>
+            
+            
+
+        <!-- THIS PLAYS EVERY LANDMARK -->
+        <div id="cwrap">
+            
+            <div id="audiowrap"> 
+                <div id="extraControls" class = "thumbnail">
+                    <h2> Landmarks </h2>
+                    <button id="btnLandmarkPrev" class="ctrlbtn">|&lt;&lt; Prev Landmark </button> <button id="btnLandmarkNext" class="ctrlbtn">Next Landmark &gt;&gt;|</button>
+                </div>
+            </div>
+        
+         </div>
+       
+        <!-- THIS PLAYS EVERY HEADER -->
+        <div id="cwrap">
+            
+            <div id="audiowrap">
+
+                
+                <div id="extraControls" class = "thumbnail">
+                    <h2> Headers </h2>
+                    <button id="btnHeaderPrev" class="ctrlbtn">|&lt;&lt; Prev Header </button> <button id="btnHeaderNext" class="ctrlbtn">Next Header &gt;&gt;|</button>
+                </div>
+            </div>
+        
+         </div>
+
+        <!-- THIS PLAYS EVERY LINK -->
+        <div id="cwrap">
+            
+            <div id="audiowrap">
+
+                
+                <div id="extraControls" class = "thumbnail">
+                    <h2> Links </h2>
+                    <button id="btnLinkPrev" class="ctrlbtn">|&lt;&lt; Prev Link </button> <button id="btnLinkNext" class="ctrlbtn">Next Link &gt;&gt;|</button>
+                </div>
+            </div>
+        
+         </div>
+
+
+        <!-- THIS PLAYS EVERY LINE -->
+        <div id="cwrap">
+            
+            <div id="audiowrap">
+                
+
+                <div id="extraControls" class = "thumbnail">
+                    <h2> Lines </h2>
+                    <button id="btnPrev" class="ctrlbtn">|&lt;&lt; Prev Line </button> <button id="btnNext" class="ctrlbtn">Next Line &gt;&gt;|</button>
+                </div>
+            </div>
+        
+        </div>
 
         <br>
         <br>
         <br>
-    
 
-
-
-    <!-- THIS PLAYS EVERY LANDMARK -->
-    <div id="cwrap">
-        <div id="nowPlay">
-            <div id="npTitle"></div>
-        </div>
-        <div id="audiowrap">
-            <div id="audio0">
-                <audio id="audio1" controls="controls" width="300">
-                    Your browser does not support the HTML5 Audio Tag.
-                </audio>
+         <!-- AUDIO PLAYER -->
+            <div id="audioPlayer">
+                <div id="nowPlay">
+                    <div id="npTitle"></div>
+                    <br>
+                </div>
+                <div id="audiowrap">
+                    <div id="audio0">
+                        <audio id="audio1" controls="controls" width="300">
+                            Your browser does not support the HTML5 Audio Tag.
+                        </audio>
+                    </div>
+                </div>
             </div>
 
-            
-            <div id="extraControls" class = "thumbnail">
-                <h2> Landmarks </h2>
-                <button id="btnLandmarkPrev" class="ctrlbtn">|&lt;&lt; Prev Landmark </button> <button id="btnLandmarkNext" class="ctrlbtn">Next Landmark &gt;&gt;|</button>
+         <!-- ANSWER BOX -->
+        <div class="answer">
+                <h2>Review Rating Number:</h2>
+                <br>
+                <input type="text" name="Review Rating Number" id="rating" value="">
+                <button onclick ="ratingcheck()"> Submit </button> 
             </div>
-        </div>
-    
-     </div>
-   
-    <!-- THIS PLAYS EVERY HEADER -->
-    <div id="cwrap">
-        <div id="nowPlay">
-            <div id="npTitle"></div>
-        </div>
-        <div id="audiowrap">
-
-            
-            <div id="extraControls" class = "thumbnail">
-                <h2> Headers </h2>
-                <button id="btnHeaderPrev" class="ctrlbtn">|&lt;&lt; Prev Header </button> <button id="btnHeaderNext" class="ctrlbtn">Next Header &gt;&gt;|</button>
-            </div>
-        </div>
-    
-     </div>
-
-    <!-- THIS PLAYS EVERY LINK -->
-    <div id="cwrap">
-        <div id="nowPlay">
-            <div id="npTitle"></div>
-        </div>
-        <div id="audiowrap">
-
-            
-            <div id="extraControls" class = "thumbnail">
-                <h2> Links </h2>
-                <button id="btnLinkPrev" class="ctrlbtn">|&lt;&lt; Prev Link </button> <button id="btnLinkNext" class="ctrlbtn">Next Link &gt;&gt;|</button>
-            </div>
-        </div>
-    
-     </div>
 
 
-    <!-- THIS PLAYS EVERY LINE -->
-    <div id="cwrap">
-        <div id="nowPlay">
-            <div id="npTitle"></div>
-        </div>
-        <div id="audiowrap">
-            
-
-            <div id="extraControls" class = "thumbnail">
-                <h2> Lines </h2>
-                <button id="btnPrev" class="ctrlbtn">|&lt;&lt; Prev Line </button> <button id="btnNext" class="ctrlbtn">Next Line &gt;&gt;|</button>
-            </div>
-        </div>
-    
     </div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
