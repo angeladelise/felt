@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+    <meta charset="utf-8">
+    <title>Felt</title>
+    <meta name="description" content="felt">
+    <meta name="author" content="felt">
 </head>
 <body>
+
+    <img src="images/felt_logo.png" width=500px alt="Felt Logo">
+
+    <!-- TIMER SECTION  <div id="worked">00:00</div> -->
+    
+    <div id="worked">00:00</div>
+    <div id="time">:</div>
+
+
+
+    <p>Goal: Find the button down shirt and write the review rating number in the box below before the time runs out. </p>
+    
+        Review Rating Number:<br>
+        <input type="text" name="Review Rating Number" id="rating" value="">
+        <button onclick ="ratingcheck()"> Submit </button>
+
+    
 
     <!-- THIS PLAYS EVERY LINE -->
 	<div id="cwrap">
@@ -95,20 +115,55 @@
                         {"track":1,"name":"Landmark Banner","length":"00:00","file":"landmark_banner"},
                         {"track":2,"name":"Sign In","length":"00:00","file":"link_signin"},
                         {"track":3,"name":"Felt Logo","length":"00:00","file":"link_imagelogo"},
+
                         {"track":4,"name":"Home","length":"00:00","file":"link_home"},
                         {"track":5,"name":"Women","length":"00:00","file":"link_women"},
                         {"track":6,"name":"Men","length":"00:00","file":"link_men"},
                         {"track":7,"name":"Customer Service","length":"00:00","file":"link_customer"},
                         {"track":8,"name":"Shopping Cart","length":"00:00","file":"link_shoppingcart"},
+
                         {"track":9,"name":"Sale","length":"00:00","file":"header_sale"},
+                        
                         {"track":10,"name":"Blouse","length":"00:00","file":"header_blouse"},
+                        {"track":10,"name":"Price","length":"00:00","file":"price_18.99"},
+                        {"track":10,"name":"Colors","length":"00:00","file":"colors_4"},
+                        {"track":10,"name":"Rating","length":"00:00","file":"rating_4.2"},
+
                         {"track":11,"name":"Graphic T","length":"00:00","file":"header_graphict"},
+                        {"track":10,"name":"Price","length":"00:00","file":"price_10.99"},
+                        {"track":10,"name":"Colors","length":"00:00","file":"colors_6"},
+                        {"track":10,"name":"Rating","length":"00:00","file":"rating_4.6"},
+
                         {"track":12,"name":"Basic V Neck","length":"00:00","file":"header_basicv"},
+                        {"track":10,"name":"Price","length":"00:00","file":"price_9.99"},
+                        {"track":10,"name":"Colors","length":"00:00","file":"colors_10"},
+                        {"track":10,"name":"Rating","length":"00:00","file":"rating_4.8"},
+
                         {"track":13,"name":"Tank Top","length":"00:00","file":"header_tanktop"},
+                        {"track":10,"name":"Price","length":"00:00","file":"price_17.99"},
+                        {"track":10,"name":"Colors","length":"00:00","file":"colors_7"},
+                        {"track":10,"name":"Rating","length":"00:00","file":"rating_3.9"},
+
                         {"track":14,"name":"Sweater","length":"00:00","file":"header_sweater"},
+                        {"track":10,"name":"Price","length":"00:00","file":"price_21.99"},
+                        {"track":10,"name":"Colors","length":"00:00","file":"colors_3"},
+                        {"track":10,"name":"Rating","length":"00:00","file":"rating_3.5"},
+
                         {"track":15,"name":"Button Down","length":"00:00","file":"header_buttondown"},
+                        {"track":10,"name":"Price","length":"00:00","file":"price_18.99"},
+                        {"track":10,"name":"Colors","length":"00:00","file":"colors_4"},
+                        {"track":10,"name":"Rating","length":"00:00","file":"rating_4.3"},
+
                         {"track":16,"name":"Shoulder","length":"00:00","file":"header_shoulder"},
+                        {"track":10,"name":"Price","length":"00:00","file":"price_20.99"},
+                        {"track":10,"name":"Colors","length":"00:00","file":"colors_3"},
+                        {"track":10,"name":"Rating","length":"00:00","file":"rating_4.1"},
+
                         {"track":17,"name":"Plaid","length":"00:00","file":"header_plaid"},
+                        {"track":10,"name":"Price","length":"00:00","file":"price_15.99"},
+                        {"track":10,"name":"Colors","length":"00:00","file":"colors_5"},
+                        {"track":10,"name":"Rating","length":"00:00","file":"rating_3.8"},
+
                         {"track":18,"name":"End of List","length":"00:00","file":"end"}
                     ],
 
@@ -352,6 +407,62 @@
                 }
                 
             });
+
+            function ratingcheck() {
+                var value = document.getElementById("rating").value;
+                if (value == 4.3) {
+                    window.alert("correct!");
+                } else {
+                    window.alert("try again");
+                }
+            }
+
+
+            $(document).ready(function (e) {
+                var $worked = $("#worked");
+
+                function update() {
+                    var myTime = $worked.html();
+                    var ss = myTime.split(":");
+                    var dt = new Date();
+                    dt.setHours(0);
+                    dt.setMinutes(ss[0]);
+                    dt.setSeconds(ss[1]);
+
+                    var dt2 = new Date(dt.valueOf() + 1000);
+                    var temp = dt2.toTimeString().split(" ");
+                    var ts = temp[0].split(":");
+                    /* splitting minutes and seconds in an array
+                    
+
+                    console.log("ts1 " + ts[1] + " ts2 " + ts[2]);
+                    console.log("3 " + 3 - ts[1] + " ts2 " + 59 - ts[2]);
+                    */
+
+                    var minutes = ts[1];
+                    var seconds = ts[2];
+
+                    var countdownmin = 3 - minutes;
+                    var coundownsec = seconds;
+                    var displaysec = 59 - seconds;
+                    console.log("minutes " + countdownmin + " seconds " + displaysec);
+
+
+                    document.getElementById('time').innerHTML = countdownmin + ":" + displaysec; 
+
+                    $worked.html(ts[1]+":"+ts[2]);
+                    setTimeout(update, 1000);
+
+                    if(countdownmin == 0 && displaysec ==0){
+                        window.alert("You ran out of time!");
+
+                    }
+                }
+
+                setTimeout(update, 1000);
+            });
+
+            
         </script>
     </body>
 </html>
