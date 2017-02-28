@@ -5,6 +5,7 @@
     <title>Felt</title>
     <meta name="description" content="felt">
     <meta name="author" content="felt">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
@@ -17,37 +18,22 @@
 
 
 
-    <p>Goal: Find the button down shirt and write the review rating number in the box below before the time runs out. </p>
+        <p>Goal: Find the button down shirt and write the review rating number in the box below before the time runs out. </p>
     
         Review Rating Number:<br>
         <input type="text" name="Review Rating Number" id="rating" value="">
-        <button onclick ="ratingcheck()"> Submit </button>
+        <button onclick ="ratingcheck()"> Submit </button> 
 
+        <br>
+        <br>
+        <br>
     
 
-    <!-- THIS PLAYS EVERY LINE -->
-	<div id="cwrap">
-	    <div id="nowPlay">
-	        <h3 id="npAction">Paused:</h3>
-	        <div id="npTitle"></div>
-	    </div>
-	    <div id="audiowrap">
-	        <div id="audio0">
-	            <audio id="audio1" controls="controls" width="300">
-	                Your browser does not support the HTML5 Audio Tag.
-	            </audio>
-	        </div>
-	        <div id="extraControls">
-	            <button id="btnPrev" class="ctrlbtn">|&lt;&lt; Prev Line </button> <button id="btnNext" class="ctrlbtn">Next Line &gt;&gt;|</button>
-	        </div>
-	    </div>
-	
-	</div>
+
 
     <!-- THIS PLAYS EVERY LANDMARK -->
     <div id="cwrap">
         <div id="nowPlay">
-            <h3 id="npAction">Paused:</h3>
             <div id="npTitle"></div>
         </div>
         <div id="audiowrap">
@@ -56,49 +42,64 @@
                     Your browser does not support the HTML5 Audio Tag.
                 </audio>
             </div>
-            <div id="extraControls">
+
+            
+            <div id="extraControls" class = "thumbnail">
+                <h2> Landmarks </h2>
                 <button id="btnLandmarkPrev" class="ctrlbtn">|&lt;&lt; Prev Landmark </button> <button id="btnLandmarkNext" class="ctrlbtn">Next Landmark &gt;&gt;|</button>
             </div>
         </div>
     
      </div>
-    <!-- THIS PLAYS EVERY LINK -->
+   
+    <!-- THIS PLAYS EVERY HEADER -->
     <div id="cwrap">
         <div id="nowPlay">
-            <h3 id="npAction">Paused:</h3>
             <div id="npTitle"></div>
         </div>
         <div id="audiowrap">
-            <div id="audio0">
-                <audio id="audio1" controls="controls" width="300">
-                    Your browser does not support the HTML5 Audio Tag.
-                </audio>
+
+            
+            <div id="extraControls" class = "thumbnail">
+                <h2> Headers </h2>
+                <button id="btnHeaderPrev" class="ctrlbtn">|&lt;&lt; Prev Header </button> <button id="btnHeaderNext" class="ctrlbtn">Next Header &gt;&gt;|</button>
             </div>
-            <div id="extraControls">
+        </div>
+    
+     </div>
+
+    <!-- THIS PLAYS EVERY LINK -->
+    <div id="cwrap">
+        <div id="nowPlay">
+            <div id="npTitle"></div>
+        </div>
+        <div id="audiowrap">
+
+            
+            <div id="extraControls" class = "thumbnail">
+                <h2> Links </h2>
                 <button id="btnLinkPrev" class="ctrlbtn">|&lt;&lt; Prev Link </button> <button id="btnLinkNext" class="ctrlbtn">Next Link &gt;&gt;|</button>
             </div>
         </div>
     
      </div>
 
-     <!-- THIS PLAYS EVERY HEADER -->
+
+    <!-- THIS PLAYS EVERY LINE -->
     <div id="cwrap">
         <div id="nowPlay">
-            <h3 id="npAction">Paused:</h3>
             <div id="npTitle"></div>
         </div>
         <div id="audiowrap">
-            <div id="audio0">
-                <audio id="audio1" controls="controls" width="300">
-                    Your browser does not support the HTML5 Audio Tag.
-                </audio>
-            </div>
-            <div id="extraControls">
-                <button id="btnHeaderPrev" class="ctrlbtn">|&lt;&lt; Prev Header </button> <button id="btnHeaderNext" class="ctrlbtn">Next Header &gt;&gt;|</button>
+            
+
+            <div id="extraControls" class = "thumbnail">
+                <h2> Lines </h2>
+                <button id="btnPrev" class="ctrlbtn">|&lt;&lt; Prev Line </button> <button id="btnNext" class="ctrlbtn">Next Line &gt;&gt;|</button>
             </div>
         </div>
     
-     </div>
+    </div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
