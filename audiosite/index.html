@@ -420,47 +420,47 @@
                         else if(indexLink == 8){
                             index = 13;    
                             indexLandmark = 3;
-                            indexHeader = 2;
+                            indexHeader = 1.5;
                         }
                         else if(indexLink == 9){
                             index = 18;  
                             indexLandmark = 3; 
-                            indexHeader = 3; 
+                            indexHeader = 2.5; 
                         }
                          else if(indexLink == 10){
                             index = 23;  
                             indexLandmark = 3;  
-                            indexHeader = 4;
+                            indexHeader = 3.5;
                         }
                         else if(indexLink == 11){
                             index = 28;    
                             indexLandmark = 3;
-                            indexHeader = 5;
+                            indexHeader = 4.5;
                         }
                         else if(indexLink == 12){
                             index = 33;    
                             indexLandmark = 3;
-                            indexHeader = 6;
+                            indexHeader = 5.5;
                         }
                         else if(indexLink == 13){
                             index = 38;    
                             indexLandmark = 3;
-                            indexHeader = 7;
+                            indexHeader = 6.5;
                         }
                         else if(indexLink == 14){
                             index = 43;    
                             indexLandmark = 3;
-                            indexHeader = 8;
+                            indexHeader = 7.5;
                         }
                         else if(indexLink == 15){
                             index = 48;    
                             indexLandmark = 3;
-                            indexHeader = 9;
+                            indexHeader = 8.5;
                         }
                         else if(indexLink == 16){
                             index = 53;    
                             indexLandmark = 4;
-                            indexHeader = 10;
+                            indexHeader = 9.5;
                         }
                        
                     }),
@@ -517,54 +517,106 @@
                         else if(indexLink == 8){
                             index = 13;   
                             indexLandmark = 3; 
-                            indexHeader = 1;
+                            indexHeader = 1.5;
                         }
                         else if(indexLink == 9){
                             index = 18;   
                             indexLandmark = 3; 
-                            indexHeader = 2;
+                            indexHeader = 2.5;
                         }
                          else if(indexLink == 10){
                             index = 23;    
                             indexLandmark = 3;
-                            indexHeader = 3;
+                            indexHeader = 3.5;
                         }
                         else if(indexLink == 11){
                             index = 28;   
                             indexLandmark = 3; 
-                            indexHeader = 4;
+                            indexHeader = 4.5;
                         }
                         else if(indexLink == 12){
                             index = 33;   
                             indexLandmark = 3; 
-                            indexHeader = 5;
+                            indexHeader = 5.5;
                         }
                         else if(indexLink == 13){
                             index = 38;  
                             indexLandmark = 3;  
-                            indexHeader = 6;
+                            indexHeader = 6.5;
                         }
                         else if(indexLink == 14){
                             index = 43;   
                             indexLandmark = 3; 
-                            indexHeader = 7;
+                            indexHeader = 7.5;
                         }
                         else if(indexLink == 15){
                             index = 48; 
                             indexLandmark = 3;   
-                            indexHeader = 8;
+                            indexHeader = 8.5;
                         }
                         else if(indexLink == 16){
                             index = 53;  
                             indexLandmark = 4;  
-                            indexHeader = 10;
+                            indexHeader = 9.5;
                         }
                     }),
 
                      /* THIS BUTTONS FOR THE HEADER TRACKS  */ 
 
                      btnHeaderPrev = $('#btnHeaderPrev').click(function() {
-                        if((indexHeader - 1) > -1) {
+                        if(indexHeader == 1.5){
+                            indexHeader = 1;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                            console.log("header" + indexHeader);
+                        }
+                        else if(indexHeader == 2.5){
+                            indexHeader = 2;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                            console.log("header" + indexHeader);
+                        }
+                        else if(indexHeader == 3.5){
+                            indexHeader = 3;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                            console.log("header" + indexHeader);
+                        }
+                        else if(indexHeader == 4.5){
+                            indexHeader = 4;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                            console.log("header" + indexHeader);
+                        }
+                         else if(indexHeader == 5.5){
+                            indexHeader = 5;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                            console.log("header" + indexHeader);
+                        }
+                         else if(indexHeader == 6.5){
+                            indexHeader = 6;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                            console.log("header" + indexHeader);
+                        }
+                         else if(indexHeader == 7.5){
+                            indexHeader = 7;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                        }
+                         else if(indexHeader == 8.5){
+                            indexHeader = 8;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                        }
+                         else if(indexHeader == 9.5){
+                            indexHeader = 9;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                        }
+
+                        else if((indexHeader - 1) > -1) {
                             indexHeader--;
                             loadHeaderTrack(indexHeader);
                             audio.play();
@@ -572,6 +624,7 @@
                         } else {
                             audio.play();
                         }
+
                         if(indexHeader == 0){
                             index = 0;
                         }
@@ -608,7 +661,59 @@
                     }),
 
                     btnHeaderNext = $('#btnHeaderNext').click(function() {
-                        if((indexHeader + 1) < trackHeaderCount) {
+                        if(indexHeader == 1.5){
+                            indexHeader = 2;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                            console.log("header" + indexHeader);
+                        }
+                        else if(indexHeader == 2.5){
+                            indexHeader = 3;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                            console.log("header" + indexHeader);
+                        }
+                        else if(indexHeader == 3.5){
+                            indexHeader = 4;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                            console.log("header" + indexHeader);
+                        }
+                        else if(indexHeader == 4.5){
+                            indexHeader = 5;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                            console.log("header" + indexHeader);
+                        }
+                         else if(indexHeader == 5.5){
+                            indexHeader = 6;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                            console.log("header" + indexHeader);
+                        }
+                         else if(indexHeader == 6.5){
+                            indexHeader = 7;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                            console.log("header" + indexHeader);
+                        }
+                         else if(indexHeader == 7.5){
+                            indexHeader = 8;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                        }
+                         else if(indexHeader == 8.5){
+                            indexHeader = 9;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                        }
+                         else if(indexHeader == 9.5){
+                            indexHeader = 10;
+                            loadHeaderTrack(indexHeader);
+                            audio.play();
+                        }
+
+                        else if((indexHeader + 1) < trackHeaderCount) {
                             indexHeader++;
                             loadHeaderTrack(indexHeader);
                             audio.play();
@@ -762,8 +867,8 @@
                     var countdownmin = 3 - minutes;
                     var coundownsec = seconds;
                     var displaysec = 59 - seconds;
-                    console.log("minutes " + countdownmin + " seconds " + displaysec);
-
+                   /* console.log("minutes " + countdownmin + " seconds " + displaysec);
+                    */
 
                     document.getElementById('time').innerHTML = countdownmin + ":" + displaysec; 
 
