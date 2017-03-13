@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Felt</title>
+    <meta name="description" content="felt">
+    <meta name="author" content="felt">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div id="container">
+        <img id="logo" src="images/felt_logo.png" width=150px alt="Felt Logo">
+
+        
+        <h1> The Screen Reader Experience </h1>
+
+        <h2> Experience what is it like to use a screen reader. Try our 5 minute test! </h2>
+
+        <a href="index.html"><button alt="Try the experience">Try the Experience</button></a>
+
+        <h2>What is a screen reader?</h2>
+        <p> Screen readers are a type of assistive technology which 
+            transforms digital content into auditory content, allowing users to navigate websites by sound. 
+            The most popular screen readers are JAWS, VoiceOver and NVDA.
+        </p>
+
+
+        <h2>Who uses screen readers?</h2>
+        <p> 
+            This technology is often used by
+            individuals in the blind community and individuals with physical impairments. 
+        </p>
+
+        <h2>Web Accessibility</h2>
+        <p> 
+            Web accessibility allows individuals the same online experience regardless of their method of acquiring information. 
+            Websites that are not coded following the accessibility guidelines can have a negative interaction with screen readers, making content
+            difficult or impossible to access. Individuals should not be denied access to information just because they use this
+            assistive technology. 
+        </p>
+
+    </body>
+</html>
