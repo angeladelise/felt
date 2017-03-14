@@ -1,9 +1,16 @@
    body{
        font-family: 'Montserrat', sans-serif;
-       width: 90%;
        margin-right: auto;
        margin-left: auto;
    }
+
+   #container {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #FFFFFF;
+        padding-bottom: 100px;
+    }
 
    h1{
 	   text-align: center;
@@ -12,7 +19,6 @@
   	}
 
     h2{
-        text-align: left;
         color: rgb(13,80,87);
         font-family: 'Montserrat', sans-serif;
     }
@@ -118,6 +124,36 @@
         color: white;
     }
 
+    #banner{
+        background-color: #DAEAE9; 
+        width: 100%;
+        height: 300px;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .homepagediv{
+        width: 28%;
+        text-align: center;
+        float: left;
+        margin-top: 35px;
+        background-color: #F8F8F8;
+        padding-bottom: 20px;
+        margin-left: 1%;
+        margin-right: 1%;
+        border-radius: 3px;
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .homepageheader{
+        text-align: center;
+        width: 100%;
+        font-size: 30px;
+
+    }
+
     #audioPlayer{
         width: 300px;
         margin-left: auto;
@@ -139,13 +175,7 @@
 
     }
 
-	#container {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: #FFFFFF;
-        padding-bottom: 100px;
-	}
+	
 
     #bannerleft {
         float: left;

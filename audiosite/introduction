@@ -8,36 +8,57 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <div id="container">
+    
         <img id="logo" src="images/felt_logo.png" width=150px alt="Felt Logo">
 
-        
-        <h1> The Screen Reader Experience </h1>
+        <div id="banner">
+            <h1> The Screen Reader Experience </h1>
 
-        <h2> Experience what is it like to use a screen reader. Try our 5 minute test! </h2>
+            <h2> Experience what is it like to use a screen reader. Try the 5 minute test! </h2>
 
-        <a href="index.html"><button id="experience" alt="Try the experience">Try the Experience</button></a>
+            <a href="index.html"><button id="experience" alt="Try the experience">Try the Experience</button></a>
 
-        <h2>What is a screen reader?</h2>
-        <p> Screen readers are a type of assistive technology which 
-            transforms digital content into auditory content, allowing users to navigate websites by sound. 
-            The most popular screen readers are JAWS, VoiceOver and NVDA.
-        </p>
+        </div>
+        <br>
 
+        <div id="container">
+            <h2 class="homepageheader">What is a screen reader?</h2>
 
-        <h2>Who uses screen readers?</h2>
-        <p> 
-            This technology is often used by
-            individuals in the blind community and individuals with physical impairments. 
-        </p>
+            <div class="homepagediv">
+                <p> Screen readers are a type of assistive technology which 
+                    transforms digital content into auditory content, allowing users to navigate websites by sound. 
+                    The most popular screen readers are JAWS, VoiceOver and NVDA.
+                </p>
+            </div>
+             <div class="homepagediv">
+                <p> Screen readers are a type of assistive technology which 
+                    transforms digital content into auditory content, allowing users to navigate websites by sound. 
+                    The most popular screen readers are JAWS, VoiceOver and NVDA.
+                </p>
+            </div>
+             <div class="homepagediv">
+                <p> Screen readers are a type of assistive technology which 
+                    transforms digital content into auditory content, allowing users to navigate websites by sound. 
+                    The most popular screen readers are JAWS, VoiceOver and NVDA.
+                </p>
+            </div>
 
-        <h2>Web Accessibility</h2>
-        <p> 
-            Web accessibility allows individuals the same online experience regardless of their method of acquiring information. 
-            Websites that are not coded following the accessibility guidelines can have a negative interaction with screen readers, making content
-            difficult or impossible to access. Individuals should not be denied access to information just because they use this
-            assistive technology. 
-        </p>
+            <br>
 
+            <h2 class="homepageheader">Who uses screen readers?</h2>
+            <p> 
+                This technology is often used by
+                individuals in the blind community and individuals with physical impairments. 
+            </p>
+            <br>
+
+            <h2 class="homepageheader">Web Accessibility</h2>
+            <p> 
+                Web accessibility allows individuals the same online experience regardless of their method of acquiring information. 
+                Websites that are not coded following the accessibility guidelines can have a negative interaction with screen readers, making content
+                difficult or impossible to access. Individuals should not be denied access to information just because they use this
+                assistive technology. 
+            </p>
+        </div>
     </body>
 </html>
