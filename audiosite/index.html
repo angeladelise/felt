@@ -18,7 +18,8 @@
 
 
 
-            <p>Task: Find the button down shirt and write the review rating number in the box below before the time runs out. </p>
+            <p>Imagine you want to buy a button down shirt. 
+                Find this item on this retail page and write the price in the box below before the time runs out. </p>
             
             
 
@@ -98,7 +99,7 @@
 
          <!-- ANSWER BOX -->
         <div class="answer">
-                <h2>Review Rating Number:</h2>
+                <h2>Price of the Button Down Shirt:</h2>
                 <br>
                 <input type="text" name="Review Rating Number" id="rating" value="">
                 <button onclick ="ratingcheck()"> Submit </button> 
@@ -1546,7 +1547,7 @@
 
             function ratingcheck() {
                 var value = document.getElementById("rating").value;
-                if (value == 4.3) {
+                if (value == 18.99) {
                     window.alert("correct!");
                 } else {
                     window.alert("try again");

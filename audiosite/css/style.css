@@ -108,6 +108,16 @@
         margin-right: auto;
     }
 
+    #experience{
+        font-size: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: #B21C1C; 
+        color: white;
+    }
+
     #audioPlayer{
         width: 300px;
         margin-left: auto;

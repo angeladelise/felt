@@ -16,7 +16,7 @@
 
         <h2> Experience what is it like to use a screen reader. Try our 5 minute test! </h2>
 
-        <a href="index.html"><button alt="Try the experience">Try the Experience</button></a>
+        <a href="index.html"><button id="experience" alt="Try the experience">Try the Experience</button></a>
 
         <h2>What is a screen reader?</h2>
         <p> Screen readers are a type of assistive technology which 
