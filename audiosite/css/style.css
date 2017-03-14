@@ -147,6 +147,20 @@
         padding-right: 10px;
     }
 
+    .homepagebigdiv{
+        width: 100%;
+        text-align: center;
+        background-color: #F8F8F8;
+        padding-bottom: 20px;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 20px;
+        border-radius: 3px;
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     .homepageheader{
         text-align: center;
         width: 100%;
