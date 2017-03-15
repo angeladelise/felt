@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Felt: Instructions</title>
+    <meta name="description" content="felt">
+    <meta name="author" content="felt">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    
+        <img id="logo" src="images/felt_logo.png" width=150px alt="Felt Logo">
+
+        <div id="banner">
+            <h1> The Screen Reader Experience </h1>
+
+            <h2> Think you can navigate a website with a screen reader? Try the 5 minute test! </h2>
+
+            <a href="index.html"><button id="experience" alt="Try the experience">Begin</button></a>
+
+        </div>
+        <br>
+
+        <div id="container">
+            <div class ="homepagebigdiv">
+                <h2 class="homepageheader">Imagine you are on a retail site...</h2>
+
+                <div class="homepagediv">
+                    <p> Screen readers are a type of assistive technology which 
+                        transforms digital content into auditory content.
+                    </p>
+                </div>
+                 <div class="homepagediv">
+                    <p> Screen readers interact with HTML code of a website and allows users to navigate websites by the underlying tags including: landmarks, headers, links or by every line. 
+                    </p>
+                </div>
+                 <div class="homepagediv">
+                    <p> 
+                        Screen readers use synthesized speech to narrate a site and can present the information in a braille display. The most popular screen readers are JAWS, VoiceOver and NVDA.  
+                    </p>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class ="homepagebigdiv">
+                <h2 class="homepageheader">Who uses screen readers?</h2>
+                <p> 
+                    Individuals in the blind community rely on screen readers to gain access to the internet and digital content. Individuals with various other impairments may also use screen readers if they are not able to use a mouse. 
+                </p>
+                <br>
+            </div>
+
+            <div class ="homepagebigdiv">
+                <h2 class="homepageheader">Web Accessibility</h2>
+                <p> 
+                    Web accessibility allows individuals the same online experience regardless of their method of acquiring information. 
+                    Websites that are not coded following the accessibility guidelines can have a negative interaction with screen readers, making content
+                    difficult or impossible to access. Individuals should not be denied access to information just because they use this
+                    assistive technology. 
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

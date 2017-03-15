@@ -16,7 +16,7 @@
 
             <h2> Think you can navigate a website with a screen reader? Try the 5 minute test! </h2>
 
-            <a href="index.html"><button id="experience" alt="Try the experience">Try the Experience</button></a>
+            <a href="instructions.html"><button id="experience" alt="Try the experience">Try the Experience</button></a>
 
         </div>
         <br>

@@ -124,6 +124,18 @@
         color: white;
     }
 
+    #experiencebegin{
+        font-size: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: #37AF72; 
+        color: white;
+        text-align: center;
+        margin-left: 40%;
+    }
+
     #banner{
         background-color: #DAEAE9; 
         width: 100%;
