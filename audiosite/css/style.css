@@ -62,7 +62,6 @@
         font-size: 18px;
         margin-left: auto;
         margin-right: auto;
-        text-align: center;
     }
 
     button{
@@ -159,6 +158,20 @@
         padding-right: 10px;
     }
 
+    .homepagedivleft{
+        width: 28%;
+        text-align: left;
+        float: left;
+        margin-top: 35px;
+        background-color: #F8F8F8;
+        padding-bottom: 20px;
+        margin-left: 1%;
+        margin-right: 1%;
+        border-radius: 3px;
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     .homepagebigdiv{
         width: 100%;
         text-align: center;
@@ -178,6 +191,22 @@
         width: 100%;
         font-size: 30px;
 
+    }
+
+    .redbox{
+        text-align: center;
+        width: 100%;
+        font-size: 24px;
+        border: 5px solid #B21C1C;
+        padding: 10px;
+    }
+
+    .redboxsmall{
+        text-align: center;
+        width: 100%;
+        font-size: 18px;
+        border: 2px solid gray;
+        padding: 10px;
     }
 
     #audioPlayer{
