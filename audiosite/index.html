@@ -6,10 +6,17 @@
     <meta name="description" content="felt">
     <meta name="author" content="felt">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet">
 </head>
 <body>
+
+    <div id="bannerleftalign">
+            <a href="introduction.html"><img id="logo" src="images/felt_logowhitehori.png" width=250px align="left" alt="Felt Logo"></a>
+            <h1> The Screen Reader Experience </h1>
+
+        </div>
+
     <div id="container">
-        <img id="logo" src="images/felt_logo.png" width=150px alt="Felt Logo">
 
         <!-- TIMER SECTION  <div id="worked">00:00</div> -->
         
@@ -1575,11 +1582,11 @@
                     var temp = dt2.toTimeString().split(" ");
                     var ts = temp[0].split(":");
                     /* splitting minutes and seconds in an array
-                    
+                    */
 
                     console.log("ts1 " + ts[1] + " ts2 " + ts[2]);
                     console.log("3 " + 3 - ts[1] + " ts2 " + 59 - ts[2]);
-                    */
+                    
 
                     var minutes = ts[1];
                     var seconds = ts[2];
@@ -1587,6 +1594,41 @@
                     var countdownmin = 3 - minutes;
                     var coundownsec = seconds;
                     var displaysec = 59 - seconds;
+                    
+                    if(displaysec == 9){
+                        displaysec = 09;
+                    }
+                    else if(displaysec == 9){
+                        displaysec = 09;
+                    }
+                    else if(displaysec == 8){
+                        displaysec = 08;
+                    }
+                    else if(displaysec == 7){
+                        displaysec = 07;
+                    }
+                    else if(displaysec == 6){
+                        displaysec = 06;
+                    }
+                    else if(displaysec == 5){
+                        displaysec = 05;
+                    }
+                    else if(displaysec == 4){
+                        displaysec = 04;
+                    }
+                    else if(displaysec == 3){
+                        displaysec = 03;
+                    }
+                    else if(displaysec == 2){
+                        displaysec = 02;
+                    }
+                    else if(displaysec == 1){
+                        displaysec = 01;
+                    }
+                    else if(displaysec == 0){
+                        displaysec = 00;
+                    }
+
                    /* console.log("minutes " + countdownmin + " seconds " + displaysec);
                     */
 

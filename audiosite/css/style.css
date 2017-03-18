@@ -2,6 +2,8 @@
        font-family: 'Montserrat', sans-serif;
        margin-right: auto;
        margin-left: auto;
+       margin-bottom: -8px;
+       margin-top: -8px;
    }
 
    #container {
@@ -9,7 +11,7 @@
         margin-left: auto;
         margin-right: auto;
         background-color: #FFFFFF;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
     }
 
    h1{
@@ -64,11 +66,10 @@
         margin-right: auto;
     }
 
-    button{
-        border-radius: 8px;
+      button{
+        border-radius: 2px;
         border-width: 1px;
-        background-color: #e7e7e7; 
-        color: black;
+        background-color: transparent; 
         margin-left: auto;
         margin-right: auto;
         text-align: center;
@@ -76,6 +77,56 @@
         padding-bottom: 5px;
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+
+    a:link{
+        text-decoration: none;
+    }
+
+        #banner{
+        width: 100%;
+        height: 620px;
+        padding-top: 60px;
+        text-align: center;
+        color: white;
+    }
+
+    #bannerleftalign{
+        width: 80%;
+        height: 80px;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 10px;
+        color: white;
+        text-align: right;
+        background-color: #134248;
+        display: inline;
+        float: left;
+        vertical-align: text-bottom;
+    }
+
+    #bannerleftalign h1{
+        color: white;
+        font-weight: 200;
+        font-size: 35px;
+        text-align: right;
+    }
+
+    #bannerleftalign img{
+        padding-top: 8px;
+    }
+
+    #banner h1{
+        color: white;
+
+    }
+
+    #banner h2{
+        color: white;
+        opacity: 80%;
+        font-weight: 200;
+        font-size: 18px;
     }
 
     .answer{
@@ -108,9 +159,17 @@
     }
 
     #logo{
-        margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
+    }
+    #background: {
+        z-index: -1;
+    }
+
+    #backgrounddark{
+        background-color: #134248;
+        padding: 50px;
+        margin-bottom: -20px;
     }
 
     #experience{
@@ -119,8 +178,18 @@
         padding-bottom: 10px;
         padding-left: 15px;
         padding-right: 15px;
-        background-color: #B21C1C; 
         color: white;
+        margin: auto;
+        display: block;
+        text-decoration: none;
+        font-weight: 200;
+        border: white 2px solid;
+    }
+
+    #experience:hover{
+        color: black;
+        background-color:#8ce1dc;
+        transition: background-color 0.5s ease-in-out;
     }
 
     #experiencebegin{
@@ -129,18 +198,43 @@
         padding-bottom: 10px;
         padding-left: 15px;
         padding-right: 15px;
-        background-color: #37AF72; 
+        background-color: #134248; 
         color: white;
         text-align: center;
         margin-left: 40%;
     }
 
-    #banner{
-        background-color: #DAEAE9; 
-        width: 100%;
-        height: 300px;
-        padding: 30px;
+    #experiencebegin:hover{
+        color: #134248;
+        background-color:white;
+        transition: background-color 0.5s ease-in-out;
+    }
+
+    #backgroundimage{
+        height: auto;
+       left: 0;
+       margin: 0;
+       height: 700px;
+       width: 100%;
+       padding: 0;
+       position: absolute;
+       top: 0;
+       z-index: -1;
+
+    }
+
+    .homepagebigdiv{
+        width: 90%;
         text-align: center;
+        padding-bottom: 20px;
+        margin-left: 5%;
+        margin-right: 1%;
+        margin-top: 20px;
+        border-radius: 3px;
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: inline-block;
     }
 
     .homepagediv{
@@ -172,14 +266,16 @@
         padding-left: 10px;
         padding-right: 10px;
     }
-    .homepagebigdiv{
-        width: 100%;
+
+    .homepagedivimage{
+        width: 58%;
         text-align: center;
+        float: left;
+        margin-top: 35px;
         background-color: #F8F8F8;
         padding-bottom: 20px;
         margin-left: 1%;
         margin-right: 1%;
-        margin-top: 20px;
         border-radius: 3px;
         padding-top: 20px;
         padding-left: 10px;
@@ -189,15 +285,17 @@
     .homepageheader{
         text-align: center;
         width: 100%;
-        font-size: 30px;
+        font-size: 40px;
 
     }
 
     .redbox{
         text-align: center;
-        width: 100%;
+        width: 70%;
         font-size: 24px;
         border: 5px solid #B21C1C;
+        margin-left: 15%;
+        color: white;
         padding: 10px;
     }
 

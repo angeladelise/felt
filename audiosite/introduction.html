@@ -6,61 +6,76 @@
     <meta name="description" content="felt">
     <meta name="author" content="felt">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet">
 </head>
 <body>
     
-        <img id="logo" src="images/felt_logo.png" width=150px alt="Felt Logo">
+        <img id="backgroundimage" src="images/background.png" width=100% height="700px" alt="background blue and green gradient">
+        
 
         <div id="banner">
+            <img id="logo" src="images/felt_logowhite.png" width=300px alt="Felt Logo">
             <h1> The Screen Reader Experience </h1>
 
-            <h2> Think you can navigate a website with a screen reader? Try the 5 minute test! </h2>
+            <h2> Think you can navigate a website with a screen reader? 
+                <br>
+                Try the 5 minute test! </h2>
 
+            <br>
             <a href="instructions.html"><button id="experience" alt="Try the experience">Try the Experience</button></a>
 
         </div>
-        <br>
 
-        <div id="container">
+        
             <div class ="homepagebigdiv">
                 <h2 class="homepageheader">What is a screen reader?</h2>
 
-                <div class="homepagediv">
+                <div class="homepagedivleft">
                     <p> Screen readers are a type of <strong>assistive technology</strong> which 
                         transforms digital content into auditory content.
+                        <br>
+                        <br>
+                        Screen readers <strong>interact with HTML code </strong> of a website and allows users to navigate websites by the underlying tags including: landmarks, headers, links or by every line. 
                     </p>
                 </div>
-                 <div class="homepagediv">
-                    <p> Screen readers <strong>interact with HTML code </strong> of a website and allows users to navigate websites by the underlying tags including: landmarks, headers, links or by every line. 
-                    </p>
-                </div>
-                 <div class="homepagediv">
-                    <p> 
-                        Screen readers use <strong>synthesized speech</strong> to narrate a site and can present the information in a braille display. The most popular screen readers are JAWS, VoiceOver and NVDA.  
-                    </p>
-                </div>
+
+                 
+                <figure class="homepagedivimage">
+                    <img src="images/screenreaderdemo.gif" width="500px"/>
+                    <figcaption>VoiceOver screen reader on Google.com</figcaption>
+                </figure>
             </div>
 
             <br>
             <br>
             <br>
 
-            <div class ="homepagebigdiv">
-                <h2 class="homepageheader">Who uses screen readers?</h2>
+            <div id="backgrounddark">
+                <div class ="homepagebigdiv">
+                    <h2 class="homepageheader">Who uses screen readers?</h2>
 
-                <div class="homepagedivleft">
-                    <p> 
-                        
-                    Individuals in the blind community rely on screen readers to gain access to the internet and digital content. Individuals with various other impairments may also use screen readers if they are not able to use a mouse.  
-                    </p>
+                    <div class="homepagediv">
+                        <p> 
+                            
+                        Individuals in the <strong>blind community </strong>rely on screen readers to gain access to the internet and digital content. 
+                      
+                        </p>
+                    </div>
+
+                    <div class="homepagediv">
+                        <p> 
+                            Screen readers use <strong>synthesized speech</strong> to narrate a site and can present the information in a braille display. The most popular screen readers are JAWS, VoiceOver and NVDA.  
+                        </p>
+                    </div>
+
+                    <div class="homepagediv">
+                        <p> 
+                            Individuals with various other impairments may also use screen readers if they are not able to use a mouse.  
+                        </p>
+                    </div>
+
+                    <br>
                 </div>
-
-                <figure>
-                    <img src="images/screenreaderdemo.gif" width="400px"/>
-                    <figcaption>VoiceOver screen reader on Google.com</figcaption>
-                </figure>
-
-                <br>
             </div>
 
             <div class ="homepagebigdiv">
@@ -70,8 +85,20 @@
                     Websites that are not coded following the accessibility guidelines can have a negative interaction with screen readers, making content
                     difficult or impossible to access. Individuals should not be denied access to information just because they use this
                     assistive technology. 
+
+                    Web designers and developers need to abide by the Section 508 regulations to make sites accessibility to individuals that rely on screen readers. 
+
+                    Websites that are not accessible have a bad screen reader interaction. 
                 </p>
+
             </div>
-        </div>
+
+            <div id="backgrounddark">
+
+                <a href="instructions.html"><button id="experience" alt="Try the experience">Try the Experience</button></a>
+
+            </div>
+
+        
     </body>
 </html>
