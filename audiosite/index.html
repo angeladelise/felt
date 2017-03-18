@@ -1598,9 +1598,6 @@
                     if(displaysec == 9){
                         displaysec = 09;
                     }
-                    else if(displaysec == 9){
-                        displaysec = 09;
-                    }
                     else if(displaysec == 8){
                         displaysec = 08;
                     }
@@ -1632,7 +1629,12 @@
                    /* console.log("minutes " + countdownmin + " seconds " + displaysec);
                     */
 
-                    document.getElementById('time').innerHTML = countdownmin + ":" + displaysec; 
+                    if (displaysec >= 10 && displaysec <= 59){
+                        document.getElementById('time').innerHTML = countdownmin + ":" + displaysec; 
+                    }
+                    else{
+                        document.getElementById('time').innerHTML = countdownmin + ":" + "0" + displaysec; 
+                    }
 
                     $worked.html(ts[1]+":"+ts[2]);
                     setTimeout(update, 1000);
