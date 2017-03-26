@@ -20,6 +20,8 @@
 
         <!-- TIMER SECTION  <div id="worked">00:00</div> -->
         
+        <div id="popupdiv"></div>
+
         <div id="worked">00:00</div>
         <div id="timerdiv">
             <div id="time">:</div>
@@ -33,7 +35,7 @@
             <h1>Find the button down shirt </h1>
             <p>Find this item on this retail page and write the price in the box below before the time runs out. </p>
             
-            
+        
 
         <!-- THIS PLAYS EVERY LANDMARK -->
         <div id="cwrap">
@@ -115,7 +117,7 @@
         <div class="answer">
                 <h2>Price of the Button Down Shirt:</h2>
                 <br>
-                <input type="text" name="Review Rating Number" id="rating" value="">
+                <input type="text" name="Review Rating Number" id="rating" value="$">
                 <button onclick ="ratingcheck()"> Submit </button> 
             </div>
 
@@ -1561,10 +1563,11 @@
 
             function ratingcheck() {
                 var value = document.getElementById("rating").value;
-                if (value == 18.99) {
+                if (value == 18.99 || value == "$"+ 18.99) {
                     window.alert("correct!");
+                    window.location = "end.html";
                 } else {
-                    window.alert("try again");
+                    window.alert("Try again");
                 }
             }
 
@@ -1641,15 +1644,69 @@
                     $worked.html(ts[1]+":"+ts[2]);
                     setTimeout(update, 1000);
 
-                    /*
-                    if(countdownmin == 0 && displaysec ==0){
-                        window.alert("You ran out of time!");
+                    
+                    //POP UP FOR LOSE STATE!
+                    var $popup = $('#popup');
+
+                    // Hide the popup for now, until the timer runs out
+                    //$popup.hide();
+
+                    if(countdownmin == 0 && displaysec ==00){
+                        var div = document.createElement("div");
+                        div.style.width = "90%";
+                        div.style.height = "65%";
+                        div.style.background = "#D6D6D6";
+                        div.style.color = "black";
+                        div.style.zIndex="1";
+                        div.innerHTML = "You ran out of time";
+                        div.style.position="absolute";
+                        div.style.textAlign="center";
+                        div.style.marginTop="-700px";
+
+                        //document.getElementById("popupdiv").appendChild(div)
+                        document.body.appendChild(div);
+
+                        // 1. Create the TRY AGAIN button
+                        var trybutton = document.createElement("button");
+                        trybutton.innerHTML = "Try Again";
+                        trybutton.style.zIndex="4";
+                        trybutton.style.color="red";
+                        trybutton.style.position="absolute";
+                        trybutton.style.textAlign="center";
+                        trybutton.style.marginTop="-600px";
+
+                        document.body.appendChild(trybutton);
+                        
+                        //document.getElementById("body").appendChild(button)
+
+                        // 3. Add event handler
+                        trybutton.addEventListener ("click", function() {
+                          window.location="index.html";
+                        });
+
+
+                        // 1. Create the VIEW SOLUTION button
+                        var endbutton = document.createElement("button");
+                        endbutton.innerHTML = "View Solution";
+                        endbutton.style.zIndex="4";
+                        endbutton.style.color="red";
+                        endbutton.style.position="absolute";
+                        endbutton.style.textAlign="center";
+                        endbutton.style.marginTop="-500px";
+
+                        document.body.appendChild(endbutton);
+                        
+                        endbutton.addEventListener ("click", function() {
+                          window.location="end.html";
+                        });
 
                     }
-                    */
+                    
                 }
 
                 setTimeout(update, 1000);
+
+
             });
 
             
