@@ -77,10 +77,19 @@
         padding-bottom: 5px;
         padding-left: 10px;
         padding-right: 10px;
+        font-family: 'Montserrat', sans-serif;
     }
 
-
-    a:link{
+    hr { 
+        display: block;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: inset;
+        border-width: 1px;
+    } 
+        a:link{
         text-decoration: none;
     }
 
@@ -136,7 +145,7 @@
         padding-bottom: 20px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 20px;
+        margin-top: 10px;
         border-radius: 3px;
         padding-top: 10px;
         padding-left: auto;
@@ -156,6 +165,8 @@
     #worked{
         color: rgb(255,255,255);
         text-align: right;
+        display: inline-block;
+        float: right;
     }
 
     #timerdiv{
@@ -164,6 +175,7 @@
         border-radius: 10px;
         border: 2px black solid;
         display: inline-block;
+        float: right;
     }
 
     #logo{
@@ -221,6 +233,10 @@
         color: #134248;
         background-color:white;
         transition: background-color 0.5s ease-in-out;
+    }
+
+    #experienceheader{
+        margin-top: 60px;
     }
 
     #backgroundimage{
@@ -312,10 +328,16 @@
 
     .redboxsmall{
         text-align: center;
-        width: 100%;
+        width: 50%;
         font-size: 18px;
         border: 2px solid gray;
         padding: 10px;
+        display: block-inline;
+        float: left;
+    }
+
+    #task{
+        display: inline-block;
     }
 
     #audioPlayer{
@@ -324,8 +346,17 @@
         margin-right: auto;
         text-align: center;
         padding-top: 120px;
+        color:white;
     }
 
+    /* Make the audio player not displayed */
+    #audio0{
+        display: none;
+    }
+
+    #navwrap{
+        /*border: 2px solid black;*/
+    }
 
     .nowPlay{
         margin-right: auto;
@@ -338,8 +369,6 @@
         text-align: center;
 
     }
-
-	
 
     #bannerleft {
         float: left;

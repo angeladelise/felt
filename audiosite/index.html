@@ -20,81 +20,92 @@
 
         <!-- TIMER SECTION  <div id="worked">00:00</div> -->
         
-        <div id="popupdiv"></div>
 
-        <div id="worked">00:00</div>
-        <div id="timerdiv">
-            <div id="time">:</div>
-        </div>
-
-        <div class="redboxsmall">
-             **This website is a screen reader simulator. 
-            You do not have access to the visual design of the site.**  
-        </div>
-
-            <h1>Find the button down shirt </h1>
-            <p>Find this item on this retail page and write the price in the box below before the time runs out. </p>
-            
+        <br>
+        <br>
         
+        <div id="experienceheader">
+            <div class="redboxsmall">
+                 ** Turn on speakers. 
+                 This website is a screen reader simulator. <br>
+                You do not have access to the visual design of the site.**  
+            </div>
 
+            <div id="worked">00:00</div>
+            <div id="timerdiv">
+                <div id="time">:</div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div id="task">
+            <!-- <h1>Find the button down shirt </h1> -->
+            <p><strong>Your Task: </strong>Find the button down shirt on this retail page and write the price in the box below before the time runs out. </p>
+        </div>
+            
+        <hr>
+
+        <h1>Navigation: </h1>
         <!-- THIS PLAYS EVERY LANDMARK -->
-        <div id="cwrap">
-            
-            <div id="audiowrap"> 
-                <div id="extraControls" class = "thumbnail">
-                    <h2> Landmarks </h2>
-                    <button id="btnLandmarkPrev" class="ctrlbtn">|&lt;&lt; Prev Landmark </button> <button id="btnLandmarkNext" class="ctrlbtn">Next Landmark &gt;&gt;|</button>
-                </div>
-            </div>
-        
-         </div>
-       
-        <!-- THIS PLAYS EVERY HEADER -->
-        <div id="cwrap">
-            
-            <div id="audiowrap">
 
+        <div id="navwrap">
+            <div id="cwrap">
                 
-                <div id="extraControls" class = "thumbnail">
-                    <h2> Headers </h2>
-                    <button id="btnHeaderPrev" class="ctrlbtn">|&lt;&lt; Prev Header </button> <button id="btnHeaderNext" class="ctrlbtn">Next Header &gt;&gt;|</button>
+                <div id="audiowrap"> 
+                    <div id="extraControls" class = "thumbnail">
+                        <h2> Landmarks </h2>
+                        <button id="btnLandmarkPrev" class="ctrlbtn">|&lt;&lt; Prev Landmark </button> <button id="btnLandmarkNext" class="ctrlbtn">Next Landmark &gt;&gt;|</button>
+                    </div>
                 </div>
-            </div>
-        
-         </div>
-
-        <!-- THIS PLAYS EVERY LINK -->
-        <div id="cwrap">
             
-            <div id="audiowrap">
-
+             </div>
+           
+            <!-- THIS PLAYS EVERY HEADER -->
+            <div id="cwrap">
                 
-                <div id="extraControls" class = "thumbnail">
-                    <h2> Links </h2>
-                    <button id="btnLinkPrev" class="ctrlbtn">|&lt;&lt; Prev Link </button> <button id="btnLinkNext" class="ctrlbtn">Next Link &gt;&gt;|</button>
+                <div id="audiowrap">
+
+                    
+                    <div id="extraControls" class = "thumbnail">
+                        <h2> Headers </h2>
+                        <button id="btnHeaderPrev" class="ctrlbtn">|&lt;&lt; Prev Header </button> <button id="btnHeaderNext" class="ctrlbtn">Next Header &gt;&gt;|</button>
+                    </div>
                 </div>
-            </div>
-        
-         </div>
-
-
-        <!-- THIS PLAYS EVERY LINE -->
-        <div id="cwrap">
             
-            <div id="audiowrap">
-                
+             </div>
 
-                <div id="extraControls" class = "thumbnail">
-                    <h2> Lines </h2>
-                    <button id="btnPrev" class="ctrlbtn">|&lt;&lt; Prev Line </button> <button id="btnNext" class="ctrlbtn">Next Line &gt;&gt;|</button>
+            <!-- THIS PLAYS EVERY LINK -->
+            <div id="cwrap">
+                
+                <div id="audiowrap">
+
+                    
+                    <div id="extraControls" class = "thumbnail">
+                        <h2> Links </h2>
+                        <button id="btnLinkPrev" class="ctrlbtn">|&lt;&lt; Prev Link </button> <button id="btnLinkNext" class="ctrlbtn">Next Link &gt;&gt;|</button>
+                    </div>
                 </div>
+            
+             </div>
+
+
+            <!-- THIS PLAYS EVERY LINE -->
+            <div id="cwrap">
+                
+                <div id="audiowrap">
+                    
+
+                    <div id="extraControls" class = "thumbnail">
+                        <h2> Lines </h2>
+                        <button id="btnPrev" class="ctrlbtn">|&lt;&lt; Prev Line </button> <button id="btnNext" class="ctrlbtn">Next Line &gt;&gt;|</button>
+                    </div>
+                </div>
+            
             </div>
-        
         </div>
 
-        <br>
-        <br>
-        <br>
 
          <!-- AUDIO PLAYER -->
             <div id="audioPlayer">
@@ -1651,17 +1662,23 @@
                     // Hide the popup for now, until the timer runs out
                     //$popup.hide();
 
-                    if(countdownmin == 0 && displaysec ==00){
+                    if(countdownmin == 0 && displaysec == 00){
                         var div = document.createElement("div");
                         div.style.width = "90%";
                         div.style.height = "65%";
-                        div.style.background = "#D6D6D6";
+                        div.style.background = "white";
                         div.style.color = "black";
                         div.style.zIndex="1";
-                        div.innerHTML = "You ran out of time";
+                        div.innerHTML = "You ran out of time." + "<br /> " + "Would you like to try again or view the solution?";
                         div.style.position="absolute";
+                        div.style.border="2px solid black";
                         div.style.textAlign="center";
-                        div.style.marginTop="-700px";
+                        div.style.fontSize="30px";
+                        div.style.marginTop="-750px";
+                        div.style.marginLeft="5%";
+                        div.style.marginRight="5%";
+                        div.style.paddingTop="50px";
+
 
                         //document.getElementById("popupdiv").appendChild(div)
                         document.body.appendChild(div);
@@ -1673,7 +1690,10 @@
                         trybutton.style.color="red";
                         trybutton.style.position="absolute";
                         trybutton.style.textAlign="center";
-                        trybutton.style.marginTop="-600px";
+                        trybutton.style.fontSize="18px";
+                        trybutton.style.marginTop="-500px";
+                        trybutton.style.marginLeft="30%";
+                        trybutton.style.marginRight="15%";
 
                         document.body.appendChild(trybutton);
                         
@@ -1692,7 +1712,10 @@
                         endbutton.style.color="red";
                         endbutton.style.position="absolute";
                         endbutton.style.textAlign="center";
+                        endbutton.style.fontSize="18px";
                         endbutton.style.marginTop="-500px";
+                        endbutton.style.marginLeft="60%";
+                        endbutton.style.marginRight="15%";
 
                         document.body.appendChild(endbutton);
                         
