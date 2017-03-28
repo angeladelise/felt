@@ -424,6 +424,39 @@
         border-bottom: 4px solid #6DC7D0;
     }
 
+    #imageresults { 
+        position: absolute;
+        border: 1px solid black;
+        margin-top: 100px;
+        display: block;
+        margin-left: 10%;
+        margin-right: auto;
+    }
+
+    .imageresults1{
+        position: absolute;
+        z-index: 1;
+        border: 1px solid black;
+    }
+
+    .imageresults2{
+        position: absolute;
+        z-index: 0;
+        border: 1px solid black;
+    }
+
+    .imageresults3{
+        position: absolute;
+        z-index: -1;
+        border: 1px solid black;
+    }
+
+    .imageresults4{
+        position: absolute;
+        z-index: -2;
+        border: 1px solid black;
+    }
+
   .footer{
         text-align: center;
         margin-left: auto;

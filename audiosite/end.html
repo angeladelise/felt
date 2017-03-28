@@ -23,17 +23,33 @@
         <div id="container">
             <div class ="homepagebigdiv">
                 <h2 class="homepageheader">The Website you were interacting with...</h2>
-                <img alt="Photo of Article retail web design" width="800px" border = "1" src="images/felt_retail.png" />
 
-               
+                <div id = "imageresults">
+                    <img id = "retailImage" class="imageresults1" src="images/felt_retail.png" alt="Photo of retail web design" width="800px"  />
+
+                    <img id="landmarkImage" class="imageresults2" src="images/felt_retail_landmarks.png" alt="Photo of retail web design with landmarks highlighted" width="800px" />
+
+                    <img id="headerImage" class="imageresults3" src="images/felt_retail_headers.png" alt="Photo of retail web design with headers highlighted" width="800px" />                    
+
+                    <img id="linkImage" class="imageresults4" src="images/felt_retail_links.png" alt="Photo of retail web design with links highlighted"  width="800px" />
 
                     
+
+                </div>
+
+            </div>
+
+            <div align="center">
+                <button id="showretailImage">Show Original</button>
+                <button id="showlandmarkImage">Show Landmarks</button>
+                <button id="showheaderImage">Show Headers</button>
+                <button id="showlinkImage">Show Links</button>
             </div>
 
             <br>
             
 
-            <div class ="homepagebigdiv">
+            <div class ="homepagebigdiv" position="relative">
                 <h2 class="homepageheader">Importance of Inclusive Design</h2>
                 <div class="homepagedivleft">
                     <p> First you would view the selection of the items.
@@ -53,7 +69,7 @@
         </div> <!-- End of container --> 
             
 
-            <div id="backgrounddark">
+            <div id="backgrounddark" position="relative" clear="both">
                 <h2 class="homepageheader"> Are your designs accessible? </h2>
                 <div class="homepagediv">
                         <p> 
@@ -87,6 +103,40 @@
                 
 
             </div>
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+     <script type="text/javascript">
+
+        document.getElementById("showretailImage").onclick = function() {
+            $('#landmarkImage').css("z-index", 1);
+            $('#retailImage').css("z-index", 10);
+            $('#headerImage').css("z-index", 1);
+            $('#linkImage').css("z-index", 1);
+        }
+
+        document.getElementById("showlandmarkImage").onclick = function() {
+            $('#landmarkImage').css("z-index", 10);
+            $('#retailImage').css("z-index", 1);
+            $('#headerImage').css("z-index", 1);
+            $('#linkImage').css("z-index", 1);
+        }
+
+        document.getElementById("showheaderImage").onclick = function() {
+            $('#landmarkImage').css("z-index", 1);
+            $('#retailImage').css("z-index", 1);
+            $('#headerImage').css("z-index", 10);
+            $('#linkImage').css("z-index", 1);
+        }
+
+        document.getElementById("showlinkImage").onclick = function() {
+            $('#landmarkImage').css("z-index", 1);
+            $('#retailImage').css("z-index", 1);
+            $('#headerImage').css("z-index", 1);
+            $('#linkImage').css("z-index", 10);
+        }
+
+     </script>
+
     </body>
+
 </html>
