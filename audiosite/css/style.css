@@ -467,6 +467,11 @@
         border: 1px solid black;
     }
 
+    footer{
+        display: inline-block;
+
+    }
+
   .footer{
         text-align: center;
         margin-left: auto;
