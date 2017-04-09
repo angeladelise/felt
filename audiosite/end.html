@@ -70,27 +70,34 @@
 
             <div id="backgrounddark">
                 <div class ="homepagebigdiv">
-                    <h2 class="homepageheader">Good and Bad Accessibility Examples</h2>
+                    <h2 class="homepageheader">Accessible and Inaccessible Web Designs</h2>
 
-                    <div class="homepagediv">
+                    <div class="homepagedivleft">
                         <p> 
                             
-                        Individuals in the <strong>blind community </strong>rely on screen readers to gain access to the internet and digital content. 
-                      
+                        An image or video without an "alt" tag will make the screen reader read the file name of the item. Non-descriptive file labeling leaves the user completely unaware about the content of the item. 
+
+                        <br>
+                        <br>
+                        For example, when on www.Amazon.com the screen reader states, “2593218011._ CB308835085_ SR120,50_ .jpg” when it is on the Hanes logo. This long slew of letters and numbers contain no information about the image. This coding flaw prevents screen reader users from understanding this information. 
+
+
                         </p>
                     </div>
 
-                    <div class="homepagediv">
-                        <p> 
-                            Screen readers use <strong>synthesized speech</strong> to narrate a site and can present the information in a braille display. The most popular screen readers are JAWS, VoiceOver and NVDA.  
-                        </p>
-                    </div>
+                    <figure class="homepagedivimage">
 
-                    <div class="homepagediv">
-                        <p> 
-                            Individuals with various other impairments may also use screen readers if they are not able to use a mouse.  
-                        </p>
-                    </div>
+                        <br>
+                        <br>
+
+                        <img width="100%" src="images/amazon.png">
+                    
+                        <figcaption id="light">
+                            Screen reader on Amazon.com <br>
+                            Hanes logo without "alt" text 
+                        </figcaption>
+
+                    </figure>
 
                     <br>
                 </div>
@@ -139,7 +146,7 @@
                     <div class="homepagediv">
                         <p>
                             
-                            <a target="_blank" href="https://section508.gov/content/learn/standards/quick-reference-guide#1194.22">Read more about Section 508 here</a>
+                            <a target="_blank" href="https://section508.gov/content/learn/standards/quick-reference-guide#1194.22">Read more about Section 508 Guidelines here</a>
                         </p>
                     </div>
             
@@ -149,29 +156,62 @@
 
             <div id="backgrounddark" id="absolutediv">
                 <h2 class="homepageheader"> Are your designs accessible? </h2>
-                <div class="homepagediv">
-                        <p> 
-                            <strong>Section 508</strong> 
-                            of the accessibility guidelines provides information about tagging for screen reader interaction. 
-                            https://www.section508.gov/
-
-                        </p>
-                    </div>
-                    <div class="homepagediv">
+                    
+                    <div class="homepagedivleft">
                         <p>
                             <strong>WAVE</strong> 
-                            is an online accessibility checker. Place a web address in the search bar and accessibility errors are noted.  
-                            image of wave
+                            is an online accessibility checker. 
+
+                            <br>
+                            <br>
+                            Place a web address in the search bar and accessibility errors are noted.  
+                            You can see a summary of errors and alerts on the side of the page with proper tags labeled on top of the web design.
+
+                            <br>
+                            <br>
+
+                            <a href="http://webaim.org/blog/introducing-wave-4/"> Click here to read more about WAVE Accessibility Checker</a>
                         </p>
                     </div>
-                    <div class="homepagediv">
+
+                    <figure class="homepagedivimage">
+
+                        <a href="http://wave.webaim.org/"><img width="90%" src="images/WAVE.png"></a>
+                    
+                        <figcaption id="light">
+                            WAVE Accessibility Checker on www.Google.com <br>
+                        </figcaption>
+
+                    </figure>
+
+                    <div class="homepagedivleft">
                         <p>
                             <strong>AChecker</strong>
-                            allows designers and developers to upload code to analyze if they are accessible. 
-                            image of checker 
+                            allows designers and developers to upload code to analyze if the code is accessible. 
+
+                            <br>
+                            <br>
+
+                            You can input the web page URL or upload HTML code. The program scans through the web content and indicates the issues found, where they are located in the code and possible repair solutions.
+
+                            <br>
+                            <br>
+
+                            <a href="https://achecker.ca/documentation/index.php?p=checker/index.php">
+                            Click here to read more about AChecker </a>
                         </p>
                     </div>
-                
+                    
+                    <figure class="homepagedivimage">
+
+                        <a href="https://achecker.ca/checker/index.php"><img width="90%" src="images/AChecker.png"></a>
+                    
+                        <figcaption id="light">
+                            AChecker on www.Google.com <br>
+                        </figcaption>
+
+                    </figure>
+
                 <br>
                 <br>
                 <br>
