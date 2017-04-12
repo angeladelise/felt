@@ -1575,10 +1575,13 @@
             function ratingcheck() {
                 var value = document.getElementById("rating").value;
                 if (value == 18.99 || value == "$"+ 18.99) {
-                    window.alert("correct!");
+                    rating.style.background = "#BEE291";
+                    //window.alert("Correct!");
                     window.location = "end.html";
+                   
                 } else {
-                    window.alert("Try again");
+                    rating.style.background = "#E06F69";
+                    //window.alert("Try again");
                 }
             }
 
