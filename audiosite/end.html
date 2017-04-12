@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Felt: Instructions</title>
+    <title>Felt: Results</title>
     <meta name="description" content="felt">
     <meta name="author" content="felt">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -25,13 +25,13 @@
                 <h2 class="homepageheader">The Website you were interacting with...</h2>
 
                 <div id = "imageresults">
-                    <img id = "retailImage" class="imageresults1" src="images/felt_retail.png" alt="Photo of retail web design" width="800px"  />
+                    <img id = "retailImage" class="imageresults1" src="images/felt_retail.png" alt="Photo of retail web design" width="550px"  />
 
-                    <img id="landmarkImage" class="imageresults2" src="images/felt_retail_landmarks.png" alt="Photo of retail web design with landmarks highlighted" width="800px" />
+                    <img id="landmarkImage" class="imageresults2" src="images/felt_retail_landmarks.png" alt="Photo of retail web design with landmarks highlighted" width="550px" />
 
-                    <img id="headerImage" class="imageresults3" src="images/felt_retail_headers.png" alt="Photo of retail web design with headers highlighted" width="800px" />                    
+                    <img id="headerImage" class="imageresults3" src="images/felt_retail_headers.png" alt="Photo of retail web design with headers highlighted" width="550px" />                    
 
-                    <img id="linkImage" class="imageresults4" src="images/felt_retail_links.png" alt="Photo of retail web design with links highlighted"  width="800px" />
+                    <img id="linkImage" class="imageresults4" src="images/felt_retail_links.png" alt="Photo of retail web design with links highlighted"  width="550px" />
 
                     
 
@@ -48,19 +48,30 @@
 
             <br>
             
-
             <div class ="homepagebigdiv" id="absolutediv">
                 <h2 class="homepageheader">Importance of Inclusive Design</h2>
-                <div class="homepagedivleft">
-                    <p> 39 Million people in the world are blind. Individuals that are blind rely on screen readers to navigate through digital spaces. If a website is not accessible with this assistive technologies, it hinders the ability of this group to access information. 
+                <div class="homepagediv">
+                    <p id ="large">39 Million </p>
+                    <p> 
+                    people in the world are blind. Individuals that are blind rely on screen readers to navigate through digital spaces. If a website is not accessible with this assistive technologies, it hinders the ability of this group to access information. 
                     </p>
                 </div>
-                <div class="homepagedivleft">
-                    <p> There have been 244 accessibility lawsuits from January 2015 to October 2016; 148 of them have been in the retail space.
+                <div class="homepagediv">
+                     <p id ="large">244 Lawsuits </p>
+                    <p> have been filed from January 2015 to October 2016 for not complying with web accessibility standards; 148 of them have been in the retail space.
+
+                        <br>
+                        <br>
+                        <a href="http://www.adatitleiii.com/2016/10/federal-website-lawsuits-spike-community-banks-get-demand-letters/" target="_blank">Read more about accessibility lawsuits here </a>
+
                     </p>
                 </div>
-                <div class="homepagedivleft">
-                    <p> The National Federation of the Blind sued Target in 2006 and the case was settled in 2008 when Target agreed to pay $6 million.
+                <div class="homepagediv">
+                     <p id ="large">$6 Million </p>
+                    <p> is the amount of money Target paid in the lawsuit against the National Federation of the Blind in 2008. They were sued for their inaccessible site design. 
+                        <br>
+                        <br>
+                        <a href="https://www.w3.org/WAI/bcase/target-case-study" target="_blank">Read more about the National Federation of the Blind vs Target lawsuit here </a>
                     </p>
                 </div>
             </div>
@@ -70,12 +81,79 @@
 
             <div id="backgrounddark">
                 <div class ="homepagebigdiv">
-                    <h2 class="homepageheader">Accessible and Inaccessible Web Designs</h2>
+                    <h2 class="homepageheader">Accessible Web Designs</h2>
 
                     <div class="homepagedivleft">
                         <p> 
                             
-                        An image or video without an "alt" tag will make the screen reader read the file name of the item. Non-descriptive file labeling leaves the user completely unaware about the content of the item. 
+                        WebAim is an accessible web design. The links and images contain proper tagging to provide seamless interaction with screen readers. 
+
+                        <br>
+                        <br>
+                        This site also has a logical hierarchy of headers which eases the navigation system. All of the forms contain labels so users are able to identify the proper content in each section. 
+
+
+                        </p>
+                    </div>
+
+                    <figure class="homepagedivimage">
+
+                        <br>
+
+                        <video width="100%" autoplay ="true" loop = "true" controls muted>
+                            <source src="images/webaim.mp4" type="video/mp4">
+                        </video>
+                    
+                        <figcaption id="light">
+                            Webaim.com is accessible due to its labeled form fields and hierarchy of information
+                        </figcaption>
+
+                    </figure>
+
+                    <br>
+                </div>
+
+                <div class ="homepagebigdiv">
+                    <div class="homepagedivleft">
+                        
+
+                        <p> 
+                            
+                        CouchSurfing.org is a website that connects hosts with travelers to aid in their experience of a location. 
+
+                        <br>
+                        <br>
+                        This site also has a logical hierarchy of headers which eases the navigation system. The buttons contain proper labeling so users are able to identify the contents of each button. 
+
+
+                        </p>
+                    </div>
+
+                    <figure class="homepagedivimage">
+
+                        <br>
+
+                        <video width="100%" autoplay ="true" loop = "true" controls muted>
+                            <source src="images/couchsurfing.mp4" type="video/mp4">
+                        </video>
+                    
+                        <figcaption id="light">
+                            CouchSurfing.org is accessible due it is hierarchy of information and labeled buttons
+                        </figcaption>
+
+                    </figure>
+
+                    <br>
+                </div>
+            </div>
+
+            <div class ="homepagebigdiv">
+                    <h2 class="homepageheader">Inaccessible Web Designs</h2>
+
+                    <div class="homepagedivleft">
+                        <p> 
+                            
+                        Amazon is the largest online store; providing a tremendous amount of products to their users. An image or video without an "alt" tag will make the screen reader read the file name of the item. Non-descriptive file labeling leaves the user completely unaware about the content of the item. 
 
                         <br>
                         <br>
@@ -88,9 +166,10 @@
                     <figure class="homepagedivimage">
 
                         <br>
-                        <br>
 
-                        <img width="100%" src="images/amazon.png">
+                        <video width="100%" autoplay ="true" loop = "true" controls muted>
+                            <source src="images/amazon_hanes.mp4" type="video/mp4">
+                        </video>
                     
                         <figcaption id="light">
                             Screen reader on Amazon.com <br>
@@ -99,11 +178,44 @@
 
                     </figure>
 
+
                     <br>
-                </div>
             </div>
 
-            
+            <div class ="homepagebigdiv">
+
+                    <div class="homepagedivleft">
+                        <p> 
+                        Ebay contains a grid of images and links to access information about their selection of products. Using JavaScript on a site requries ARIA tags to make information accessible. 
+
+                        <br>
+                        <br>
+                        This example shows what occurs when a screen reader selects an item from the 'Holiday Gatherings' section. A pop up div appears; however, the screen reader cannot access any of the content. The reader does not indicate that a pop up is on the screen and does not allow the user to interact with any of the information. The content is completely inaccessible to the user.  
+
+
+                        </p>
+                    </div>
+
+                    <figure class="homepagedivimage">
+
+                        <br>
+
+                        <video width="100%" autoplay ="true" loop = "true" controls muted>
+                            <source src="images/ebay_popup.mp4" type="video/mp4">
+                        </video>
+                    
+                        <figcaption id="light">
+                            Screen reader on Ebay.com <br>
+                            JavaScript pop up window leaves content inaccessible
+                        </figcaption>
+
+                    </figure>
+
+                    <br>
+            </div>
+
+
+        <div id="backgrounddark">
             <div class ="homepagebigdiv">
                 <h2 class="homepageheader">Section 508 Guidelines</h2>
                     <div class="homepagediv">
@@ -112,11 +224,7 @@
                             of the accessibility guidelines provides information about tagging for screen reader interaction. 
 
                             <br>
-                            <br>
-
-                            
-
-                            
+                            <br>                           
 
                         </p>
                     </div>
@@ -152,9 +260,10 @@
             
 
             </div>
+        </div>
             
 
-            <div id="backgrounddark" id="absolutediv">
+            <div class ="homepagebigdiv">
                 <h2 class="homepageheader"> Are your designs accessible? </h2>
                     
                     <div class="homepagedivleft">
@@ -210,14 +319,71 @@
                             AChecker on www.Google.com <br>
                         </figcaption>
 
-                    </figure>
+                    </figure>            
 
-                <br>
-                <br>
-                <br>
-                
+            </div>
+
+             <div id="backgrounddark">
+                <h2 class="homepageheader"> Want to learn more? </h2>
+
+                 <div class="homepagedivleft">
+                        <p> 
+                            
+                        The W3C Web Accessibility Initiative (WAI) developed resources for web accessibility. Their goal is to create a completely inclusive web experience by making information accessible to people with any kind of disability. 
+
+
+                        <br>
+                        <br>
+                        This site provides information about how to make your own designs accessible and why inclusive design is important. 
+
+
+                        </p>
+                </div>
+
+                <figure class="homepagedivimage">
+
+                        <br>
+
+                            <a href="https://www.w3.org/standards/webdesign/accessibility">
+                                 <img src="images/w3.png" width="100%">
+                            </a>
+                    
+                        <figcaption id="light">
+                            W3C.org provides information on accessible design
+                        </figcaption>
+
+                </figure>
 
                 
+                <div class="homepagedivleft">
+                        <p> 
+                            
+                        WebAim provides information about web accessibility including: training, technical assistance and evaluations of current site designs.
+
+
+
+                        <br>
+                        <br>
+                        This blog also issues surveys to screen readers every year, providing information about how individuals use this technology to navigate the web. 
+
+
+                        </p>
+                </div>
+
+                <figure class="homepagedivimage">
+
+                        <br>
+
+                            <a href="www.webaim.org">
+                                 <img src="images/webaim.png" width="100%">
+                            </a>
+                    
+                        <figcaption id="light">
+                            Webaim.com has resources to help create accessible designs
+                        </figcaption>
+
+                </figure>
+
                 <footer>
                     <div class="homepagediv">
                         <p>
@@ -235,8 +401,6 @@
                         </p>
                     </div>
                 </footer>
-
-                
 
             </div>
 
