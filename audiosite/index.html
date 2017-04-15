@@ -123,14 +123,25 @@
             </div>
             
     
+            <div id="hint" class="hidden">
+                <h2>Try Navigating by Lines</h2>
+                <br>
+                <h2>Look for the Button Down Shirt</h2>     
+            </div>
 
          <!-- ANSWER BOX -->
         <div class="answer">
-                <h2>Price of the Button Down Shirt:</h2>
-                <br>
-                <input type="text" name="Review Rating Number" id="rating" value="$">
-                <button onclick ="ratingcheck()"> Submit </button> 
-            </div>
+
+            <h2>Price of the Button Down Shirt:</h2>
+            <br>
+            <input type="text" name="Review Rating Number" id="rating" value="$">
+            <button onclick ="ratingcheck()"> Submit </button> 
+
+            
+
+        </div>
+
+        
 
 
     </div>
@@ -147,8 +158,8 @@
                     extension = '',
                     tracks = [
                         {"track":0,"name":"End of List","length":"00:00","file":"end"},
-                        {"track":1,"name":"Landmark Banner","length":"00:00","file":"landmark_banner"},
-                        {"track":2,"name":"Sign In","length":"00:00","file":"link_signin"},
+                        {"track":1,"name":"Landmark Banner","length":"00:00","file":"landmark_bannerv1"},
+                        {"track":2,"name":"Sign In","length":"00:00","file":"link_signinv1"},
                         {"track":3,"name":"Felt Logo","length":"00:00","file":"link_imagelogo"},
                         
                         {"track":4,"name":"Navigation","length":"00:00","file":"landmark_navigation"},
@@ -159,7 +170,7 @@
                         {"track":9,"name":"Shopping Cart","length":"00:00","file":"link_shoppingcart"},
 
                         {"track":10,"name":"Main","length":"00:00","file":"landmark_main"},
-                        {"track":11,"name":"Sale","length":"00:00","file":"header_sale"},
+                        {"track":11,"name":"Sale","length":"00:00","file":"header_salev1"},
                         {"track":12,"name":"Banner Image","length":"00:00","file":"image_banner"},
                         
                         {"track":13,"name":"Image Blouse","length":"00:00","file":"link_imageblouse"},
@@ -1580,10 +1591,12 @@
                     window.location = "end.html";
                    
                 } else {
-                    rating.style.background = "#E06F69";
+                    rating.style.background = "#E8A0A0";
                     //window.alert("Try again");
                 }
             }
+
+            
 
 
             $(document).ready(function (e) {
@@ -1665,6 +1678,12 @@
                     // Hide the popup for now, until the timer runs out
                     //$popup.hide();
 
+                    //HINT POP UP
+                     if(countdownmin == 1 && displaysec == 00){
+                         $('#hint').removeClass('hidden');
+                        }
+
+
                     if(countdownmin == 0 && displaysec == 00){
                         var div = document.createElement("div");
                         div.style.width = "90%";
@@ -1727,6 +1746,8 @@
                         });
 
                     }
+
+                   
                     
                 }
 
@@ -1735,6 +1756,7 @@
 
             });
 
+            
             
         </script>
     </body>
